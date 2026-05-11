@@ -8,10 +8,13 @@ class ResponsiveHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Layout Responsivo')),
+      appBar: AppBar(
+        title: const Text('Painel de Eventos Acadêmicos'),
+        elevation: 2,
+      ),
       body: LayoutBuilder(
         builder: (context, constraints) {
-          final useVerticalLayout = constraints.maxWidth < 700;
+          final useVerticalLayout = constraints.maxWidth < 800;
 
           if (useVerticalLayout) {
             return const VerticalLayoutExample();
